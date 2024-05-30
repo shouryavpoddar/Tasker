@@ -110,6 +110,7 @@ const Form = () => {
                                 Task Name
                             </label>
                             <input
+                                required={true}
                                 value={firstName}
                                 name="firstName"
                                 type="text"
@@ -122,6 +123,7 @@ const Form = () => {
                                 Due Date
                             </label>
                             <input
+                                required={true}
                                 value={dueDate}
                                 name="dueDate"
                                 type="date"
@@ -134,6 +136,7 @@ const Form = () => {
                                 Priority
                             </label>
                             <input
+                                required={true}
                                 value={priority}
                                 name="priority"
                                 type="number"
@@ -144,6 +147,7 @@ const Form = () => {
                         <div className="flex items-start mb-5">
                             <div className="flex items-center h-5 mr-1">
                                 <input
+                                    required={true}
                                     className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
                                     checked={complete}
                                     name="complete"
