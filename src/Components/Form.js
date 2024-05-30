@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import AssignPeopleModal from "./AssignPeopleModal";
-import { ModalContext, TaskContext, TasksContext } from "./TasksProvider";
+import { ModalContext, editTaskContext, TasksContext } from "./TasksProvider";
 import Modal from "react-modal";
 
 Modal.setAppElement("#root");
@@ -8,7 +8,7 @@ Modal.setAppElement("#root");
 const Form = () => {
     const data = JSON.parse(localStorage.getItem("fetchedData"));
     const [openModal, setOpenModal] = useContext(ModalContext);
-    const [task, setTask] = useContext(TaskContext);
+    const [task, setTask] = useContext(editTaskContext);
     const [tasks, addTask, updateTask] = useContext(TasksContext);
 
     const [formData, setFormData] = useState(() => {

@@ -1,6 +1,6 @@
 import React, {createContext, useEffect, useReducer, useState} from "react";
 
-export const TaskContext = createContext()
+export const editTaskContext = createContext()
 
 export const ModalContext = createContext()
 
@@ -79,9 +79,9 @@ export const TasksProvider = (props) => {
             ]}
         >
             <ModalContext.Provider value={[modalIsOpen, setModalIsOpen]}>
-                <TaskContext.Provider value={[editTask, setEditTask]}>
+                <editTaskContext.Provider value={[editTask, setEditTask]}>
                     {props.children}
-                </TaskContext.Provider>
+                </editTaskContext.Provider>
             </ModalContext.Provider>
         </TasksContext.Provider>
     );

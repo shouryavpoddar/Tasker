@@ -1,9 +1,9 @@
 import React, {useContext, useState, useEffect} from "react";
-import {ModalContext, TaskContext, TasksContext} from "./TasksProvider";
+import {ModalContext, editTaskContext, TasksContext} from "./TasksProvider";
 
 function Tasks({taskKey, firstName, dueDate, completed, priority, selectedPerson}) {
     const [complete, setComplete] = useState(completed);
-    const [task, setTask] = useContext(TaskContext);
+    const [task, setTask] = useContext(editTaskContext);
     const [openModal, setOpenModal] = useContext(ModalContext);
     const [tasks, addTask, updateTask, deleteTask] = useContext(TasksContext);
 
